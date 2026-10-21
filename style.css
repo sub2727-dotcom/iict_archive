@@ -1062,3 +1062,156 @@ a:focus-visible {
   }
 
 }
+
+
+
+/* ==========================================
+   About Me + Contact 추가 디자인
+========================================== */
+
+/* 프로필과 연락처를 위아래로 배치 */
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+/* 프로필 상단 영역 */
+.profile-main {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+/* 이메일 연락처 영역 */
+.contact-section {
+  margin-top: 28px;
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(80, 110, 150, 0.15);
+}
+
+/* CONTACT 제목 */
+.contact-section h4 {
+  margin: 0 0 18px;
+
+  color: #8294aa;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+}
+
+/* 이메일 목록: 한 개의 카드만 표시 */
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* 이메일 카드 */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  width: 100%;
+  max-width: 460px;
+  min-width: 0;
+
+  padding: 17px;
+
+  background: rgba(241, 246, 252, 0.8);
+
+  border: 1px solid rgba(220, 231, 244, 0.8);
+  border-radius: 16px;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* 이메일 아이콘 */
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 43px;
+  height: 43px;
+
+  background: #e1eaf5;
+  border-radius: 12px;
+
+  color: #244970;
+  font-size: 21px;
+}
+
+/* 이메일 정보 */
+.contact-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  gap: 3px;
+}
+
+/* EMAIL 라벨 */
+.contact-label {
+  color: #8294aa;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* 실제 이메일 주소 */
+.contact-value {
+  color: #173556;
+
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* 오른쪽 화살표 */
+.contact-arrow {
+  color: #56769b;
+  font-size: 19px;
+}
+
+/* 이메일 카드에 마우스를 올렸을 때 */
+.contact-item:hover {
+  background: #e8f0fa;
+  transform: translateY(-2px);
+}
+
+/* 모바일 화면 대응 */
+@media (max-width: 650px) {
+
+  .profile-main {
+    gap: 16px;
+  }
+
+  .contact-item {
+    padding: 15px;
+  }
+
+}
+
+/* 사용자 접근성 설정 반영 */
+@media (prefers-reduced-motion: reduce) {
+
+  .contact-item {
+    transition: none;
+  }
+
+  .contact-item:hover {
+    transform: none;
+  }
+
+}
+
+
