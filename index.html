@@ -4,37 +4,236 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- TODO 1: 브라우저 탭에 보일 제목 -->
+
+  <!-- 브라우저 탭에 표시되는 제목 -->
   <title>정문기입 과제 아카이브</title>
+
+  <!-- 외부 CSS 파일 연결 -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <main class="container">
+  <div class="background-glow" aria-hidden="true"></div>
 
-    <header class="page-header">
-      <!-- TODO 2: 이름 -->
-      <h1>김수빈의 과제 아카이브</h1>
+  <!-- 전체 콘텐츠 -->
+  <div class="container">
 
-      <!-- TODO 3: 한 줄 소개 -->
-      <p>2026-2 정보문화기술입문 p5.js 과제 모음</p>
-    </header>
+    <!-- 상단 내비게이션 -->
+    <nav class="navbar" aria-label="메인 메뉴">
 
-    <!-- 과제 목록: href 는 과제 폴더 이름과 똑같이 (대소문자까지) -->
-    <ul class="assignment-list">
-      <!-- TODO 4: 과제 1 제목 -->
-      <li class="assignment-card"><a href="assignment1/">Assignment 1 - p5로 표현한 사범대학 10동 </a></li>
+      <a href="#home" class="brand">
+        <span class="brand-icon">KS.</span>
+        <span class="brand-name">SUBIN KIM</span>
+      </a>
 
-      <!-- TODO 5: 과제 2 제목 -->
-      <li class="assignment-card"><a href="assignment2/">Assignment 2 - 랜덤 함수를 사용한 브루클린 브릿지의 유성우</a></li>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+      </div>
 
-      <!-- TODO 6: 과제 3 제목 -->
-       <li class="assignment-card"><a href="assignment3/">Assignment 3 - 버튼 기능을 활용한 체리 푸딩 게임</a></li>
-      
+    </nav>
 
-    </ul>
+    <main id="home">
 
-  </main>
+      <!-- 메인 소개 영역 -->
+      <header class="hero">
+
+        <div class="hero-top">
+          <span class="hero-label">
+            KIM SUBIN'S PORTFOLIO
+          </span>
+
+          <span class="semester-badge">
+            2026 FALL
+          </span>
+        </div>
+
+        <div class="hero-content">
+
+          <h1>
+            Creative Coding<br>
+            Archive<span class="title-dot">.</span>
+          </h1>
+
+          <h2>김수빈의 과제 아카이브</h2>
+
+          <p>
+            2026-2 정보문화기술입문 p5.js 과제 모음
+          </p>
+
+        </div>
+
+        <!-- 반투명 유리 정보 패널 -->
+        <div class="hero-bottom glass-panel">
+
+          <span>Creative Coding · Fall 2026</span>
+
+          <span class="project-count">
+            03 PROJECTS
+          </span>
+
+        </div>
+
+      </header>
+
+
+      <!-- 과제 목록 -->
+      <section id="projects" class="projects-section">
+
+        <div class="section-header">
+
+          <div>
+            <span class="section-label">01 / PORTFOLIO</span>
+            <h2>Selected Works<span class="heading-dot">.</span></h2>
+            <p>한 학기 동안의 코딩 기록</p>
+          </div>
+
+          <span class="section-number">01 — 03</span>
+
+        </div>
+
+        <!-- 과제 목록: 기존 링크와 제목 유지 -->
+        <ul class="assignment-list">
+
+          <!-- 과제 1 -->
+          <li class="assignment-card">
+
+            <a href="assignment1/" class="assignment-link">
+
+              <span class="assignment-number">01</span>
+
+              <span class="assignment-info">
+
+                <span class="assignment-tag">
+                  SHAPES &amp; COLORS
+                </span>
+
+                <span class="assignment-title">
+                  Assignment 1 - p5로 표현한 사범대학 10동
+                </span>
+
+              </span>
+
+              <span class="assignment-arrow" aria-hidden="true">
+                ↗
+              </span>
+
+            </a>
+
+          </li>
+
+
+          <!-- 과제 2 -->
+          <li class="assignment-card">
+
+            <a href="assignment2/" class="assignment-link">
+
+              <span class="assignment-number">02</span>
+
+              <span class="assignment-info">
+
+                <span class="assignment-tag">
+                  RANDOMNESS
+                </span>
+
+                <span class="assignment-title">
+                  Assignment 2 - 랜덤 함수를 사용한 브루클린 브릿지의 유성우
+                </span>
+
+              </span>
+
+              <span class="assignment-arrow" aria-hidden="true">
+                ↗
+              </span>
+
+            </a>
+
+          </li>
+
+
+          <!-- 과제 3 -->
+          <li class="assignment-card">
+
+            <a href="assignment3/" class="assignment-link">
+
+              <span class="assignment-number">03</span>
+
+              <span class="assignment-info">
+
+                <span class="assignment-tag">
+                  INTERACTION
+                </span>
+
+                <span class="assignment-title">
+                  Assignment 3 - 버튼 기능을 활용한 체리 푸딩 게임
+                </span>
+
+              </span>
+
+              <span class="assignment-arrow" aria-hidden="true">
+                ↗
+              </span>
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <!-- 자기소개 -->
+      <section id="about" class="about-section">
+
+        <div class="section-header">
+
+          <div>
+            <span class="section-label">02 / PROFILE</span>
+            <h2>About Me<span class="heading-dot">.</span></h2>
+          </div>
+
+        </div>
+
+        <div class="about-card glass-card">
+
+          <div class="profile-icon" aria-hidden="true">
+            KS
+          </div>
+
+          <div class="profile-info">
+
+            <h3>
+              김수빈
+              <span>Kim Subin</span>
+            </h3>
+
+            <p>서울대학교 영어교육과/언론정보학 복수전공</p>
+
+          </div>
+
+          <span class="profile-label">
+            SNU · 2026
+          </span>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- 하단 푸터 -->
+    <footer class="footer">
+
+      <span>© 2026 KIM SUBIN</span>
+
+      <span>CREATIVE CODING ARCHIVE</span>
+
+    </footer>
+
+  </div>
 
 </body>
 </html>
