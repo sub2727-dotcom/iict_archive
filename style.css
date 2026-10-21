@@ -1,0 +1,142 @@
+
+/* 전체 페이지 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+/* 페이지 배경 및 기본 글꼴 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #172b4d;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+  line-height: 1.6;
+}
+
+/* 콘텐츠를 화면 중앙에 배치 */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 32px;
+}
+
+/* 페이지 상단 제목 영역 */
+.page-header {
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+/* 메인 제목 스타일 */
+.page-header h1 {
+  margin: 0 0 14px;
+  color: #102a54;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+/* 제목 아래 소개 문구 */
+.page-header p {
+  margin: 0;
+  color: #758196;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* 과제 목록 기본 설정 */
+.assignment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 각 과제를 감싸는 카드 디자인 */
+.assignment-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e9f1;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(16, 42, 84, 0.05);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+/* 카드에 마우스를 올렸을 때 */
+.assignment-card:hover {
+  transform: translateY(-4px);
+  border-color: #b6c6df;
+  box-shadow: 0 12px 28px rgba(16, 42, 84, 0.11);
+}
+
+/* 카드 안의 링크 스타일 */
+.assignment-card a {
+  display: block;
+  padding: 28px 32px;
+  color: #183963;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+/* 키보드로 링크를 선택했을 때 */
+.assignment-card a:focus-visible {
+  outline: 3px solid #3a6eaa;
+  outline-offset: 4px;
+  border-radius: 18px;
+}
+
+/* 휴대폰 등 작은 화면을 위한 반응형 디자인 */
+@media (max-width: 600px) {
+
+  /* 모바일에서는 여백을 줄임 */
+  .container {
+    padding: 65px 20px;
+  }
+
+  /* 모바일 제목 크기 조절 */
+  .page-header h1 {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+
+  /* 모바일 소개 문구 크기 조절 */
+  .page-header p {
+    font-size: 14px;
+  }
+
+  /* 모바일에서 제목과 목록 사이 간격 조절 */
+  .page-header {
+    margin-bottom: 38px;
+  }
+
+  /* 모바일 카드 내부 여백과 글자 크기 조절 */
+  .assignment-card a {
+    padding: 23px 22px;
+    font-size: 15px;
+  }
+
+  /* 모바일 카드 간격 조절 */
+  .assignment-list {
+    gap: 14px;
+  }
+}
+
+/* 움직임 최소화 설정을 사용하는 사용자 배려 */
+@media (prefers-reduced-motion: reduce) {
+  .assignment-card {
+    transition: none;
+  }
+
+  .assignment-card:hover {
+    transform: none;
+  }
+}
