@@ -1,39 +1,41 @@
 
 /* ==========================================
-   1. 전체 기본 설정
-   Apple 스타일의 미니멀한 디자인
+   SOFT BLOSSOM PINK ARCHIVE
+   Apple Liquid Glass 스타일
 ========================================== */
 
+
+/* ==========================================
+   1. 기본 색상과 전체 설정
+========================================== */
+
+/* 사이트 전체에 사용할 색상 변수 */
 :root {
-  /* 주요 색상 */
-  --navy: #15365f;
-  --navy-dark: #102747;
-  --navy-light: #315a88;
+  --pink: #d86b9a;
+  --pink-dark: #9d416b;
+  --pink-light: #f9e1ec;
 
-  /* 배경 및 글자 색상 */
-  --background: #f5f8fc;
-  --text: #172f50;
-  --text-muted: #71839b;
+  --background: #fff9fc;
+  --text: #623c51;
+  --text-muted: #98768a;
 
-  /* 유리 효과에 사용되는 색상 */
-  --glass-bg: rgba(255, 255, 255, 0.68);
-  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.95);
 
-  /* 그림자 */
-  --shadow: 0 12px 40px rgba(20, 48, 83, 0.06);
+  --shadow: 0 12px 35px rgba(166, 83, 123, 0.07);
 }
 
-/* 모든 요소의 크기 계산 방식 통일 */
+/* 모든 요소의 크기 계산 방식을 통일 */
 * {
   box-sizing: border-box;
 }
 
-/* 페이지 내 이동을 부드럽게 설정 */
+/* 페이지 내부 링크 이동 효과 */
 html {
   scroll-behavior: smooth;
 }
 
-/* 기본 페이지 설정 */
+/* 전체 페이지 디자인 */
 body {
   margin: 0;
   min-height: 100vh;
@@ -50,17 +52,16 @@ body {
     sans-serif;
 
   line-height: 1.6;
-
   -webkit-font-smoothing: antialiased;
 }
 
-/* 기본 링크 밑줄 제거 */
+/* 기본 링크 스타일 */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* 전체 콘텐츠 너비 */
+/* 페이지 콘텐츠 너비 */
 .container {
   position: relative;
   z-index: 1;
@@ -72,23 +73,23 @@ a {
   padding: 28px 32px 50px;
 }
 
-/* 배경의 흐릿한 푸른빛 장식 */
+/* 화면 뒤쪽에 흐릿한 분홍빛 배경 표현 */
 .background-glow {
   position: fixed;
   z-index: 0;
 
-  top: -200px;
-  right: -180px;
+  top: -180px;
+  right: -150px;
 
-  width: 650px;
-  height: 650px;
+  width: 680px;
+  height: 680px;
 
   border-radius: 50%;
 
   background: radial-gradient(
     circle,
-    rgba(117, 162, 220, 0.20) 0%,
-    rgba(117, 162, 220, 0.06) 45%,
+    rgba(245, 160, 196, 0.30) 0%,
+    rgba(250, 201, 220, 0.12) 48%,
     transparent 75%
   );
 
@@ -98,12 +99,10 @@ a {
 
 /* ==========================================
    2. 상단 내비게이션
-   둥근 캡슐 형태의 Liquid Glass UI
 ========================================== */
 
+/* 반투명 유리 형태의 메뉴 */
 .navbar {
-  position: relative;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,20 +112,19 @@ a {
   padding: 12px 18px;
   margin-bottom: 28px;
 
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.72);
 
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.95);
   border-radius: 100px;
 
-  box-shadow:
-    0 8px 30px rgba(23, 55, 95, 0.05);
+  box-shadow: 0 8px 28px rgba(173, 103, 137, 0.06);
 
-  /* 배경이 비치는 유리 효과 */
+  /* Liquid Glass의 핵심인 배경 흐림 */
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
 
-/* 왼쪽 브랜드 영역 */
+/* 왼쪽 이름 및 로고 정렬 */
 .brand {
   display: flex;
   align-items: center;
@@ -142,39 +140,38 @@ a {
   width: 42px;
   height: 42px;
 
-  background: var(--navy);
-  color: white;
+  border-radius: 14px;
 
-  border-radius: 13px;
+  background: #aa507b;
+  color: #ffffff;
 
   font-size: 14px;
   font-weight: 800;
-  letter-spacing: -0.5px;
 }
 
-/* 로고 오른쪽 이름 */
+/* SUBIN KIM 텍스트 */
 .brand-name {
-  color: var(--navy-dark);
-
   font-size: 13px;
   font-weight: 750;
-  letter-spacing: 1.1px;
+  letter-spacing: 1px;
+
+  color: #79415e;
 }
 
-/* 오른쪽 메뉴 */
+/* 내비게이션 메뉴 */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* 메뉴 링크 */
+/* 메뉴 버튼 */
 .nav-links a {
   padding: 10px 18px;
 
   border-radius: 100px;
 
-  color: #526985;
+  color: #92697e;
   font-size: 13px;
   font-weight: 650;
 
@@ -183,18 +180,18 @@ a {
     color 0.25s ease;
 }
 
-/* 메뉴에 마우스를 올렸을 때 */
+/* 마우스를 올렸을 때 */
 .nav-links a:hover {
-  background: rgba(21, 54, 95, 0.08);
-  color: var(--navy);
+  background: rgba(222, 132, 172, 0.13);
+  color: #9d416b;
 }
 
 
 /* ==========================================
    3. 메인 히어로 영역
-   커다란 영문 제목과 네이비 배경
 ========================================== */
 
+/* 큰 제목이 들어가는 분홍색 배경 */
 .hero {
   position: relative;
   overflow: hidden;
@@ -211,92 +208,90 @@ a {
 
   background: linear-gradient(
     135deg,
-    #102747 0%,
-    #183b68 65%,
-    #244e7c 100%
+    #f5d4e2 0%,
+    #f8e2eb 55%,
+    #fcecf3 100%
   );
 
-  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.85);
 
   box-shadow:
-    0 22px 55px rgba(16, 39, 71, 0.14);
+    0 24px 55px rgba(194, 111, 151, 0.13);
 }
 
-/* 배경의 은은한 원형 장식 */
+/* 배경의 장식용 원형 빛 */
 .hero::before {
   content: "";
 
   position: absolute;
 
-  width: 550px;
-  height: 550px;
+  width: 540px;
+  height: 540px;
 
-  top: -260px;
-  right: -140px;
+  top: -250px;
+  right: -120px;
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.60);
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 70px rgba(255, 255, 255, 0.025),
-    0 0 0 140px rgba(255, 255, 255, 0.015);
+    0 0 0 75px rgba(255, 255, 255, 0.12),
+    0 0 0 150px rgba(255, 255, 255, 0.07);
 
   pointer-events: none;
 }
 
-/* 헤더 내부 요소가 장식 위에 보이도록 */
+/* 제목이 장식 위에 배치되도록 설정 */
 .hero > * {
   position: relative;
   z-index: 1;
 }
 
-/* 헤더 상단 정렬 */
+/* 상단 라벨과 학기 정보 정렬 */
 .hero-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-
+  align-items: center;
   gap: 15px;
 }
 
-/* 상단 작은 영문 문구 */
+/* 포트폴리오 영문 라벨 */
 .hero-label {
-  color: #b9cce4;
+  color: #a96788;
 
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: 2px;
 }
 
-/* 학기 표시를 반투명 캡슐로 표현 */
+/* 학기 표시 유리 캡슐 */
 .semester-badge {
   padding: 9px 15px;
 
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.85);
 
-  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 100px;
 
-  color: #f3f7fd;
+  color: #905171;
 
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.8px;
 
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
 
-/* 메인 제목과 소개를 묶는 영역 */
+/* 메인 타이포그래피 영역 */
 .hero-content {
   padding: 60px 0 55px;
 }
 
-/* 가장 큰 영문 제목 */
+/* 메인 영문 제목을 크게 표현 */
 .hero h1 {
   margin: 0 0 22px;
 
-  color: white;
+  color: #653650;
 
   font-size: clamp(42px, 6vw, 72px);
   font-weight: 800;
@@ -305,90 +300,86 @@ a {
   letter-spacing: -3px;
 }
 
-/* 제목 끝 마침표를 밝은 파란색으로 */
+/* 영문 제목 뒤의 분홍 마침표 */
 .title-dot {
-  color: #a4c7f3;
+  color: #d76b9a;
 }
 
-/* 한국어 부제목 */
+/* 한국어 제목 */
 .hero h2 {
   margin: 0 0 8px;
 
-  color: #eff5fd;
+  color: #84516b;
 
   font-size: 21px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+  font-weight: 650;
 }
 
-/* 과목 소개 */
+/* 과목 설명 */
 .hero-content p {
   margin: 0;
 
-  color: #b9cce4;
+  color: #a16f88;
   font-size: 15px;
 }
 
-/* 헤더 아래쪽 유리 패널 */
+/* 반투명 유리 패널 */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.53);
 
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.90);
   border-radius: 17px;
 
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
-/* 하단 학기 정보 패널 */
+/* 히어로 아래쪽 프로젝트 정보 */
 .hero-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   gap: 16px;
-
   padding: 17px 22px;
 
-  color: #e1eaf6;
+  color: #94617a;
   font-size: 13px;
 }
 
-/* 프로젝트 개수 강조 */
+/* 프로젝트 개수 */
 .project-count {
-  color: white;
+  color: #874468;
 
   font-size: 13px;
   font-weight: 750;
-  letter-spacing: 0.5px;
 
   white-space: nowrap;
 }
 
 
 /* ==========================================
-   4. 공통 섹션 제목 디자인
+   4. 섹션 제목
 ========================================== */
 
-/* 각 섹션 사이의 여백 */
+/* 작품과 프로필 영역의 위쪽 여백 */
 .projects-section,
 .about-section {
   padding-top: 95px;
   scroll-margin-top: 30px;
 }
 
-/* 섹션 제목 정렬 */
+/* 섹션 제목 배치 */
 .section-header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 
   gap: 20px;
-
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
 /* 제목 위 작은 라벨 */
@@ -397,58 +388,60 @@ a {
 
   margin-bottom: 10px;
 
-  color: #7890ac;
+  color: #bc849f;
 
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 2px;
 }
 
-/* Selected Works, About Me */
+/* Selected Works / About Me */
 .section-header h2 {
   margin: 0;
 
-  color: var(--navy-dark);
+  color: #693e55;
 
   font-size: clamp(29px, 4vw, 36px);
   font-weight: 780;
 
   letter-spacing: -1.2px;
-  line-height: 1.3;
 }
 
-/* 섹션 제목의 마침표 */
+/* 제목 옆 마침표 */
 .heading-dot {
-  color: #6389ba;
+  color: #db83ad;
 }
 
-/* 섹션 제목 밑 설명 */
+/* 섹션 설명 */
 .section-header p {
-  margin: 9px 0 0;
+  margin: 8px 0 0;
 
   color: var(--text-muted);
   font-size: 14px;
 }
 
-/* 오른쪽 과제 번호 범위 */
+/* 프로젝트 번호 범위 */
 .section-number {
-  padding-bottom: 5px;
-
-  color: #8295ad;
-
+  color: #bb91a6;
   font-size: 13px;
-  font-weight: 600;
 
   white-space: nowrap;
 }
 
+/* 상세정보 기능에 대한 안내 */
+.section-guide {
+  margin: 0 0 18px;
+
+  color: #9a7589;
+  font-size: 13px;
+}
+
 
 /* ==========================================
-   5. 과제 카드
-   반투명 카드와 부드러운 인터랙션
+   5. 과제 카드 기본 디자인
 ========================================== */
 
-/* 기본 목록 표시 제거 */
+/* 기본 목록 기호 제거 */
 .assignment-list {
   display: flex;
   flex-direction: column;
@@ -460,7 +453,7 @@ a {
   list-style: none;
 }
 
-/* 유리 느낌의 카드 */
+/* 유리 질감의 과제 카드 */
 .assignment-card {
   overflow: hidden;
 
@@ -471,31 +464,49 @@ a {
 
   box-shadow: var(--shadow);
 
-  /* 뒤쪽 배경을 흐리게 */
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
 
   transition:
-    transform 0.3s ease,
     box-shadow 0.3s ease,
     border-color 0.3s ease,
-    background 0.3s ease;
+    transform 0.3s ease;
 }
 
-/* 카드 전체를 클릭할 수 있도록 */
-.assignment-link {
+/* 카드에 마우스를 올렸을 때 */
+.assignment-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #f1c0d5;
+
+  box-shadow:
+    0 18px 40px rgba(188, 104, 146, 0.11);
+}
+
+/* 상세정보 요소 */
+.project-details {
+  width: 100%;
+}
+
+/* 기본 삼각형 표시 제거 */
+.project-summary {
   display: flex;
   align-items: center;
-
   gap: 22px;
 
-  width: 100%;
   min-height: 120px;
-
   padding: 25px 30px;
+
+  cursor: pointer;
+  list-style: none;
 }
 
-/* 왼쪽 과제 번호 */
+/* 웹킷 브라우저의 기본 화살표 제거 */
+.project-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 왼쪽 프로젝트 번호 */
 .assignment-number {
   flex-shrink: 0;
 
@@ -506,10 +517,10 @@ a {
   width: 66px;
   height: 66px;
 
-  background: #eaf0f8;
+  background: #fbe7f0;
   border-radius: 17px;
 
-  color: #244970;
+  color: #b15d85;
 
   font-size: 24px;
   font-weight: 750;
@@ -517,11 +528,11 @@ a {
   font-variant-numeric: tabular-nums;
 
   transition:
-    background 0.3s ease,
-    color 0.3s ease;
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
-/* 과제 텍스트 영역 */
+/* 과제 제목과 키워드 */
 .assignment-info {
   display: flex;
   flex: 1;
@@ -531,86 +542,182 @@ a {
   gap: 6px;
 }
 
-/* 과제별 사용 기술 */
+/* 과제별 학습 키워드 */
 .assignment-tag {
-  color: #7e92aa;
+  color: #bd8ca4;
 
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 1.4px;
 }
 
-/* 실제 과제 제목 */
+/* 과제 제목 */
 .assignment-title {
-  color: #173556;
+  color: #6e4159;
 
   font-size: 17px;
   font-weight: 650;
 
   line-height: 1.55;
-  letter-spacing: -0.25px;
-
   overflow-wrap: anywhere;
 }
 
-/* 오른쪽 이동 화살표 */
-.assignment-arrow {
+/* 오른쪽 펼치기 버튼 */
+.expand-icon {
   flex-shrink: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 43px;
-  height: 43px;
+  width: 42px;
+  height: 42px;
 
-  background: #edf2f9;
+  background: #fbe7f0;
   border-radius: 50%;
 
-  color: #355d8a;
-  font-size: 24px;
+  color: #ae5e87;
+
+  font-size: 25px;
+  font-weight: 400;
 
   transition:
+    transform 0.3s ease,
     background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+    color 0.3s ease;
+}
+
+/* 상세정보가 펼쳐진 상태 */
+.project-details[open] .expand-icon {
+  transform: rotate(45deg);
+
+  background: #c66794;
+  color: white;
+}
+
+/* 열린 카드의 번호 강조 */
+.project-details[open] .assignment-number {
+  background: #c66794;
+  color: white;
 }
 
 
 /* ==========================================
-   6. 마우스 인터랙션
+   6. 상세정보 펼치기 영역
 ========================================== */
 
-/* 카드에 마우스를 올리면 떠오르는 효과 */
-.assignment-card:hover {
-  transform: translateY(-5px);
+/* 펼쳤을 때 보이는 콘텐츠 */
+.project-content {
+  padding: 0 30px 30px 118px;
 
-  background: rgba(255, 255, 255, 0.88);
-
-  border-color: rgba(155, 187, 224, 0.75);
-
-  box-shadow:
-    0 20px 45px rgba(20, 48, 83, 0.11);
+  animation: detailFade 0.25s ease;
 }
 
-/* 번호 색상이 남색으로 변화 */
-.assignment-card:hover .assignment-number {
-  background: var(--navy);
+/* 펼친 영역의 상단 구분선 */
+.project-description {
+  padding-top: 23px;
+
+  border-top: 1px solid #f2dce7;
+}
+
+/* 상세정보의 소제목 */
+.project-description h3 {
+  margin: 0 0 8px;
+
+  color: #87496a;
+
+  font-size: 15px;
+  font-weight: 750;
+}
+
+/* 프로젝트 설명 */
+.project-description p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #8b6c7d;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* 기술 키워드 목록 */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin: 22px 0;
+}
+
+/* 개별 기술 키워드 */
+.project-tags span {
+  padding: 7px 13px;
+
+  background: #fcebf3;
+  border: 1px solid #f6d9e7;
+  border-radius: 100px;
+
+  color: #a65b80;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* 실제 과제 페이지로 이동하는 버튼 */
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  max-width: 100%;
+  padding: 14px 19px;
+
+  background: #a9517d;
+  border-radius: 13px;
+
   color: white;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  line-height: 1.5;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
-/* 화살표도 강조 */
-.assignment-card:hover .assignment-arrow {
-  background: var(--navy);
-  color: white;
-
-  transform: translate(2px, -2px);
+/* 버튼의 긴 제목 줄바꿈 */
+.project-button {
+  overflow-wrap: anywhere;
 }
 
-/* 키보드 사용자를 위한 포커스 표시 */
-a:focus-visible {
-  outline: 3px solid #6598d4;
-  outline-offset: 4px;
+/* 버튼 오른쪽 화살표 */
+.project-button span {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+/* 버튼 호버 효과 */
+.project-button:hover {
+  background: #873c64;
+  transform: translateY(-2px);
+}
+
+/* 상세정보 등장 애니메이션 */
+@keyframes detailFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -618,7 +725,7 @@ a:focus-visible {
    7. About Me 프로필
 ========================================== */
 
-/* 반투명 유리 카드 공통 디자인 */
+/* 공통 유리 카드 */
 .glass-card {
   background: var(--glass-bg);
 
@@ -631,14 +738,16 @@ a:focus-visible {
   backdrop-filter: blur(24px);
 }
 
-/* 자기소개 카드 배치 */
+/* 프로필 전체 카드 */
 .about-card {
+  padding: 32px;
+}
+
+/* 이름과 전공 정보 배치 */
+.profile-main {
   display: flex;
   align-items: center;
-
   gap: 26px;
-
-  padding: 32px;
 }
 
 /* 프로필 이니셜 아이콘 */
@@ -654,8 +763,8 @@ a:focus-visible {
 
   background: linear-gradient(
     135deg,
-    #1c4775,
-    #102747
+    #e99bbd,
+    #b75c88
   );
 
   border-radius: 23px;
@@ -664,10 +773,9 @@ a:focus-visible {
 
   font-size: 23px;
   font-weight: 750;
-  letter-spacing: -1px;
 }
 
-/* 이름과 학과 정보 */
+/* 프로필 텍스트 */
 .profile-info {
   flex: 1;
   min-width: 0;
@@ -677,19 +785,17 @@ a:focus-visible {
 .profile-info h3 {
   margin: 0 0 9px;
 
-  color: var(--navy-dark);
+  color: #76435e;
 
   font-size: 22px;
   font-weight: 750;
-
-  letter-spacing: -0.6px;
 }
 
 /* 영문 이름 */
 .profile-info h3 span {
   margin-left: 8px;
 
-  color: #8192a8;
+  color: #b18ba0;
 
   font-size: 14px;
   font-weight: 500;
@@ -699,414 +805,44 @@ a:focus-visible {
 .profile-info p {
   margin: 3px 0;
 
-  color: #657b95;
+  color: #97748a;
   font-size: 14px;
 }
 
-/* 카드 오른쪽 학교 및 연도 */
+/* 학교 및 연도 */
 .profile-label {
   align-self: flex-start;
 
-  color: #8297af;
+  color: #b28aa0;
 
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1px;
 
   white-space: nowrap;
 }
 
 
 /* ==========================================
-   8. 하단 푸터
+   8. Contact 이메일
 ========================================== */
 
-/* 페이지 마지막 저작권 및 제목 표시 */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 16px;
-
-  margin-top: 110px;
-  padding: 25px 0;
-
-  border-top: 1px solid #dde5ef;
-
-  color: #94a3b6;
-
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-}
-
-
-/* ==========================================
-   9. 페이지 등장 애니메이션
-========================================== */
-
-/* 요소가 아래에서 자연스럽게 나타남 */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 헤더 등장 효과 */
-.hero {
-  animation: fadeUp 0.7s ease both;
-}
-
-/* 과제 카드 등장 효과 */
-.assignment-card {
-  animation: fadeUp 0.65s ease both;
-}
-
-/* 카드마다 등장 시간을 다르게 설정 */
-.assignment-card:nth-child(1) {
-  animation-delay: 0.10s;
-}
-
-.assignment-card:nth-child(2) {
-  animation-delay: 0.20s;
-}
-
-.assignment-card:nth-child(3) {
-  animation-delay: 0.30s;
-}
-
-
-/* ==========================================
-   10. 태블릿 반응형 디자인
-========================================== */
-
-@media (max-width: 768px) {
-
-  /* 전체 좌우 여백 축소 */
-  .container {
-    padding: 20px 20px 45px;
-  }
-
-  /* 헤더 내부 여백 축소 */
-  .hero {
-    min-height: 420px;
-    padding: 30px 35px;
-    border-radius: 25px;
-  }
-
-  /* 큰 제목 크기 조정 */
-  .hero h1 {
-    font-size: clamp(40px, 7vw, 58px);
-    letter-spacing: -2px;
-  }
-
-  /* 과제 섹션 간격 조절 */
-  .projects-section,
-  .about-section {
-    padding-top: 75px;
-  }
-
-  /* 과제 카드 내부 여백 조절 */
-  .assignment-link {
-    gap: 18px;
-    padding: 22px;
-  }
-
-  /* 프로필 오른쪽 표시 축소 */
-  .profile-label {
-    display: none;
-  }
-
-}
-
-
-/* ==========================================
-   11. 휴대폰 반응형 디자인
-========================================== */
-
-@media (max-width: 480px) {
-
-  /* 작은 화면의 전체 여백 */
-  .container {
-    padding: 15px 14px 35px;
-  }
-
-  /* 내비게이션 간격 조절 */
-  .navbar {
-    padding: 9px 11px;
-    gap: 8px;
-    margin-bottom: 18px;
-  }
-
-  /* 모바일 로고 크기 */
-  .brand-icon {
-    width: 37px;
-    height: 37px;
-    border-radius: 11px;
-  }
-
-  /* 좁은 화면에서 브랜드 이름 축소 */
-  .brand-name {
-    font-size: 11px;
-    letter-spacing: 0.3px;
-  }
-
-  /* 모바일 메뉴 간격 */
-  .nav-links {
-    gap: 2px;
-  }
-
-  .nav-links a {
-    padding: 8px 10px;
-    font-size: 12px;
-  }
-
-  /* 메인 히어로 크기 */
-  .hero {
-    min-height: 440px;
-    padding: 25px 22px;
-    border-radius: 22px;
-  }
-
-  /* 상단 작은 문구 */
-  .hero-label {
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
-
-  .semester-badge {
-    padding: 7px 10px;
-    font-size: 9px;
-  }
-
-  /* 큰 영문 제목 */
-  .hero h1 {
-    font-size: clamp(34px, 9vw, 42px);
-    letter-spacing: -1.7px;
-    line-height: 1.17;
-  }
-
-  /* 제목과 소개 영역 */
-  .hero-content {
-    padding: 65px 0 55px;
-  }
-
-  /* 한국어 부제목 */
-  .hero h2 {
-    font-size: 17px;
-  }
-
-  /* 과목 소개 */
-  .hero-content p {
-    font-size: 12px;
-    line-height: 1.7;
-  }
-
-  /* 하단 반투명 패널 */
-  .hero-bottom {
-    padding: 15px;
-    font-size: 10px;
-    gap: 8px;
-  }
-
-  .project-count {
-    font-size: 10px;
-  }
-
-  /* 섹션 간격 */
-  .projects-section,
-  .about-section {
-    padding-top: 60px;
-  }
-
-  /* 섹션 제목 크기 */
-  .section-header h2 {
-    font-size: 28px;
-  }
-
-  .section-header p {
-    font-size: 12px;
-  }
-
-  .section-number {
-    font-size: 11px;
-  }
-
-  /* 카드 간격 */
-  .assignment-list {
-    gap: 13px;
-  }
-
-  /* 모바일 카드 */
-  .assignment-card {
-    border-radius: 18px;
-  }
-
-  .assignment-link {
-    min-height: 100px;
-    gap: 13px;
-    padding: 17px 14px;
-  }
-
-  /* 번호 상자 */
-  .assignment-number {
-    width: 46px;
-    height: 46px;
-    border-radius: 13px;
-
-    font-size: 17px;
-  }
-
-  /* 기술 키워드 */
-  .assignment-tag {
-    font-size: 9px;
-    letter-spacing: 0.7px;
-  }
-
-  /* 과제 제목 */
-  .assignment-title {
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  /* 화살표 */
-  .assignment-arrow {
-    width: 29px;
-    height: 29px;
-    font-size: 18px;
-  }
-
-  /* 프로필 카드 */
-  .about-card {
-    padding: 23px 18px;
-    gap: 16px;
-  }
-
-  /* 모바일 프로필 아이콘 */
-  .profile-icon {
-    width: 58px;
-    height: 58px;
-    border-radius: 17px;
-    font-size: 18px;
-  }
-
-  /* 모바일 이름 */
-  .profile-info h3 {
-    font-size: 18px;
-  }
-
-  .profile-info h3 span {
-    display: block;
-    margin: 2px 0 0;
-    font-size: 12px;
-  }
-
-  /* 모바일 전공 표시 */
-  .profile-info p {
-    font-size: 12px;
-  }
-
-  /* 하단 푸터 */
-  .footer {
-    margin-top: 75px;
-    font-size: 9px;
-    letter-spacing: 0.3px;
-  }
-
-}
-
-
-/* ==========================================
-   12. 접근성 및 브라우저 호환성
-========================================== */
-
-/* 사용자가 애니메이션 최소화를 설정한 경우 */
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  .hero,
-  .assignment-card {
-    animation: none;
-  }
-
-  .assignment-card,
-  .assignment-number,
-  .assignment-arrow,
-  .nav-links a {
-    transition: none;
-  }
-
-  .assignment-card:hover {
-    transform: none;
-  }
-
-}
-
-/* 블러 기능을 지원하지 않는 브라우저 대응 */
-@supports not (backdrop-filter: blur(10px)) {
-
-  .navbar,
-  .assignment-card,
-  .glass-card {
-    background: rgba(255, 255, 255, 0.96);
-  }
-
-}
-
-
-
-/* ==========================================
-   About Me + Contact 추가 디자인
-========================================== */
-
-/* 프로필과 연락처를 위아래로 배치 */
-.about-card {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0;
-}
-
-/* 프로필 상단 영역 */
-.profile-main {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-}
-
-/* 이메일 연락처 영역 */
+/* 이메일 영역 */
 .contact-section {
   margin-top: 28px;
   padding-top: 24px;
 
-  border-top: 1px solid rgba(80, 110, 150, 0.15);
+  border-top: 1px solid #f1dce6;
 }
 
-/* CONTACT 제목 */
+/* CONTACT 라벨 */
 .contact-section h4 {
   margin: 0 0 18px;
 
-  color: #8294aa;
+  color: #b1849d;
+
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 1.8px;
-}
-
-/* 이메일 목록: 한 개의 카드만 표시 */
-.contact-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
 }
 
 /* 이메일 카드 */
@@ -1115,20 +851,25 @@ a:focus-visible {
   align-items: center;
   gap: 14px;
 
-  width: 100%;
   max-width: 460px;
   min-width: 0;
 
   padding: 17px;
 
-  background: rgba(241, 246, 252, 0.8);
+  background: rgba(251, 233, 242, 0.65);
 
-  border: 1px solid rgba(220, 231, 244, 0.8);
+  border: 1px solid #f6dce8;
   border-radius: 16px;
 
   transition:
     background 0.25s ease,
     transform 0.25s ease;
+}
+
+/* 이메일 카드 호버 */
+.contact-item:hover {
+  background: #f9dfeb;
+  transform: translateY(-2px);
 }
 
 /* 이메일 아이콘 */
@@ -1142,76 +883,611 @@ a:focus-visible {
   width: 43px;
   height: 43px;
 
-  background: #e1eaf5;
+  background: #f5d8e6;
   border-radius: 12px;
 
-  color: #244970;
+  color: #a9517d;
   font-size: 21px;
 }
 
-/* 이메일 정보 */
+/* 이메일 텍스트 */
 .contact-info {
   display: flex;
   flex: 1;
   flex-direction: column;
+
   min-width: 0;
   gap: 3px;
 }
 
-/* EMAIL 라벨 */
+/* EMAIL 표시 */
 .contact-label {
-  color: #8294aa;
+  color: #b48aa0;
 
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-/* 실제 이메일 주소 */
+/* 이메일 주소 */
 .contact-value {
-  color: #173556;
+  color: #7e4965;
 
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 650;
+
   overflow-wrap: anywhere;
 }
 
 /* 오른쪽 화살표 */
 .contact-arrow {
-  color: #56769b;
+  color: #ad7391;
   font-size: 19px;
 }
 
-/* 이메일 카드에 마우스를 올렸을 때 */
-.contact-item:hover {
-  background: #e8f0fa;
-  transform: translateY(-2px);
+
+/* ==========================================
+   9. 하단 푸터
+========================================== */
+
+/* 페이지 하단 저작권 표시 */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-top: 110px;
+  padding: 25px 0;
+
+  border-top: 1px solid #f0dce6;
+
+  color: #bc9bad;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
 }
 
-/* 모바일 화면 대응 */
-@media (max-width: 650px) {
+
+/* ==========================================
+   10. 등장 애니메이션
+========================================== */
+
+/* 페이지가 부드럽게 나타나는 효과 */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 첫 화면 등장 효과 */
+.hero {
+  animation: fadeUp 0.7s ease both;
+}
+
+/* 과제 카드 순차 등장 */
+.assignment-card {
+  animation: fadeUp 0.6s ease both;
+}
+
+.assignment-card:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.assignment-card:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.assignment-card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+
+/* ==========================================
+   11. 태블릿 반응형
+========================================== */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 20px 20px 45px;
+  }
+
+  .hero {
+    min-height: 420px;
+    padding: 30px 35px;
+    border-radius: 25px;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 7vw, 58px);
+    letter-spacing: -2px;
+  }
+
+  .projects-section,
+  .about-section {
+    padding-top: 75px;
+  }
+
+  .project-summary {
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .project-content {
+    padding: 0 22px 25px 106px;
+  }
+
+  .profile-label {
+    display: none;
+  }
+
+}
+
+
+/* ==========================================
+   12. 휴대폰 반응형
+========================================== */
+
+@media (max-width: 480px) {
+
+  /* 전체 여백 */
+  .container {
+    padding: 15px 14px 35px;
+  }
+
+  /* 상단 메뉴 */
+  .navbar {
+    padding: 9px 11px;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .brand-icon {
+    width: 37px;
+    height: 37px;
+    border-radius: 11px;
+  }
+
+  .brand-name {
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  /* 메인 제목 영역 */
+  .hero {
+    min-height: 440px;
+    padding: 25px 22px;
+    border-radius: 22px;
+  }
+
+  .hero-label {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .semester-badge {
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .hero-content {
+    padding: 60px 0 50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 9vw, 42px);
+    letter-spacing: -1.7px;
+  }
+
+  .hero h2 {
+    font-size: 17px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .hero-bottom {
+    padding: 15px;
+    font-size: 10px;
+    gap: 8px;
+  }
+
+  .project-count {
+    font-size: 10px;
+  }
+
+  /* 섹션 제목 */
+  .projects-section,
+  .about-section {
+    padding-top: 60px;
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .section-header p,
+  .section-guide {
+    font-size: 12px;
+  }
+
+  .section-number {
+    font-size: 11px;
+  }
+
+  /* 과제 카드 */
+  .assignment-list {
+    gap: 13px;
+  }
+
+  .assignment-card {
+    border-radius: 18px;
+  }
+
+  .project-summary {
+    min-height: 100px;
+    gap: 13px;
+    padding: 17px 14px;
+  }
+
+  .assignment-number {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 13px;
+    font-size: 17px;
+  }
+
+  .assignment-tag {
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+
+  .assignment-title {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .expand-icon {
+    width: 29px;
+    height: 29px;
+
+    font-size: 19px;
+  }
+
+  /* 펼친 상세정보는 모바일 너비 전체 활용 */
+  .project-content {
+    padding: 0 17px 23px;
+  }
+
+  .project-description {
+    padding-top: 18px;
+  }
+
+  .project-description p {
+    font-size: 12px;
+  }
+
+  .project-button {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  /* 프로필 */
+  .about-card {
+    padding: 23px 18px;
+  }
 
   .profile-main {
     gap: 16px;
   }
 
+  .profile-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 17px;
+    font-size: 18px;
+  }
+
+  .profile-info h3 {
+    font-size: 18px;
+  }
+
+  .profile-info h3 span {
+    display: block;
+    margin: 2px 0 0;
+    font-size: 12px;
+  }
+
+  .profile-info p {
+    font-size: 12px;
+  }
+
+  /* 이메일 */
   .contact-item {
     padding: 15px;
   }
 
+  /* 푸터 */
+  .footer {
+    margin-top: 75px;
+
+    font-size: 9px;
+    letter-spacing: 0.3px;
+  }
+
 }
 
-/* 사용자 접근성 설정 반영 */
+
+/* ==========================================
+   13. 접근성과 브라우저 호환성
+========================================== */
+
+/* 키보드 사용자가 선택한 요소 표시 */
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #bf5c8e;
+  outline-offset: 4px;
+}
+
+/* 사용자가 애니메이션 최소화를 원할 경우 */
 @media (prefers-reduced-motion: reduce) {
 
-  .contact-item {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero,
+  .assignment-card,
+  .project-content {
+    animation: none;
+  }
+
+  .assignment-card,
+  .expand-icon,
+  .assignment-number,
+  .project-button,
+  .contact-item,
+  .nav-links a {
     transition: none;
   }
 
-  .contact-item:hover {
+  .assignment-card:hover,
+  .contact-item:hover,
+  .project-button:hover {
     transform: none;
   }
 
 }
 
+/* 블러 효과 미지원 브라우저에서도 가독성 유지 */
+@supports not (
+  (backdrop-filter: blur(10px)) or
+  (-webkit-backdrop-filter: blur(10px))
+) {
 
+  .navbar,
+  .assignment-card,
+  .glass-card {
+    background: rgba(255, 255, 255, 0.97);
+  }
+
+}
+
+
+/* ==========================================
+   SOFT MILKY PINK
+   파스텔 딸기우유 컬러 리디자인
+========================================== */
+
+/* 전체 파스텔 컬러 팔레트 */
+:root {
+  --pink: #E8A9C4;
+  --pink-dark: #A7718C;
+  --pink-light: #FBEAF1;
+
+  --background: #FFFAFC;
+  --text: #80586D;
+  --text-muted: #A88A9B;
+
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.95);
+
+  --shadow: 0 12px 35px rgba(194, 146, 169, 0.06);
+}
+
+/* 메인 분홍색 배경을 밝고 부드럽게 */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #F8DFEA 0%,
+    #FBEAF1 55%,
+    #FFF3F7 100%
+  );
+
+  box-shadow: 0 20px 50px rgba(211, 162, 185, 0.12);
+}
+
+/* 메인 영어 제목 */
+.hero h1 {
+  color: #85546D;
+}
+
+/* 한국어 제목 */
+.hero h2 {
+  color: #987086;
+}
+
+/* 설명 글자 */
+.hero-content p,
+.hero-bottom {
+  color: #A47E93;
+}
+
+/* 제목의 마침표 */
+.title-dot,
+.heading-dot {
+  color: #DFA0BD;
+}
+
+/* 상단 작은 라벨과 학기 표시 */
+.hero-label,
+.semester-badge {
+  color: #A87990;
+}
+
+/* 상단 로고 색상 */
+.brand-icon {
+  background: #E8A9C4;
+}
+
+/* 이름과 메뉴 */
+.brand-name,
+.nav-links a {
+  color: #916B80;
+}
+
+/* 메뉴 호버 */
+.nav-links a:hover {
+  background: #FBEAF1;
+  color: #9C6784;
+}
+
+/* 섹션 제목 */
+.section-header h2 {
+  color: #855C71;
+}
+
+/* 섹션 작은 라벨 */
+.section-label,
+.section-number,
+.section-guide {
+  color: #AD879A;
+}
+
+/* 과제 번호 배경 */
+.assignment-number,
+.expand-icon {
+  background: #FBEAF1;
+  color: #BB83A0;
+}
+
+/* 과제 제목 */
+.assignment-title {
+  color: #80586D;
+}
+
+/* 과제별 키워드 */
+.assignment-tag {
+  color: #BA91A6;
+}
+
+/* 상세정보가 열렸을 때의 강조 색상 */
+.project-details[open] .assignment-number,
+.project-details[open] .expand-icon {
+  background: #DFA0BD;
+  color: #FFFFFF;
+}
+
+/* 상세정보 제목 */
+.project-description h3 {
+  color: #9B6B85;
+}
+
+/* 상세정보 설명 */
+.project-description p {
+  color: #9C7A8D;
+}
+
+/* 기술 키워드 */
+.project-tags span {
+  background: #FFF0F6;
+  border-color: #F8DFEA;
+  color: #AD7A96;
+}
+
+/* 과제 페이지 이동 버튼 */
+.project-button {
+  background: #D996B5;
+  color: #FFFFFF;
+}
+
+/* 버튼 호버 */
+.project-button:hover {
+  background: #C67FA2;
+}
+
+/* 프로필 아이콘 */
+.profile-icon {
+  background: linear-gradient(
+    135deg,
+    #F2C4D7,
+    #DFA0BD
+  );
+}
+
+/* 프로필 이름 */
+.profile-info h3 {
+  color: #855C71;
+}
+
+/* 전공 정보 */
+.profile-info p,
+.profile-info h3 span {
+  color: #A18496;
+}
+
+/* 이메일 카드 */
+.contact-item {
+  background: #FFF1F6;
+  border-color: #F8DFEA;
+}
+
+/* 이메일 아이콘 */
+.contact-icon {
+  background: #F8DFEA;
+  color: #B87D9B;
+}
+
+/* 이메일 주소 */
+.contact-value {
+  color: #91677E;
+}
+
+/* 이메일 카드 호버 */
+.contact-item:hover {
+  background: #FBE5EE;
+}
+
+/* 키보드 포커스 색상 */
+a:focus-visible,
+summary:focus-visible {
+  outline-color: #D996B5;
+}
+
+/* 카드 호버 테두리 */
+.assignment-card:hover {
+  border-color: #F0D1DF;
+  box-shadow: 0 18px 40px rgba(194, 146, 169, 0.10);
+}

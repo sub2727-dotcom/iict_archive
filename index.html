@@ -5,19 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- 브라우저 탭에 표시되는 제목 -->
+  <!-- 브라우저 탭 제목 -->
   <title>정문기입 과제 아카이브</title>
 
-  <!-- 외부 CSS 파일 연결 -->
+  <!-- CSS 파일 연결 -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- 배경의 은은한 푸른빛 장식 -->
+  <!-- 배경 장식 -->
   <div class="background-glow" aria-hidden="true"></div>
 
-  <!-- 전체 콘텐츠 -->
   <div class="container">
 
     <!-- 상단 내비게이션 -->
@@ -41,7 +40,6 @@
       <header class="hero">
 
         <div class="hero-top">
-
           <span class="hero-label">
             KIM SUBIN'S PORTFOLIO
           </span>
@@ -49,7 +47,6 @@
           <span class="semester-badge">
             2026 FALL
           </span>
-
         </div>
 
         <div class="hero-content">
@@ -67,15 +64,10 @@
 
         </div>
 
-        <!-- 반투명 유리 정보 패널 -->
+        <!-- 반투명 정보 패널 -->
         <div class="hero-bottom glass-panel">
-
           <span>Creative Coding · Fall 2026</span>
-
-          <span class="project-count">
-            03 PROJECTS
-          </span>
-
+          <span class="project-count">03 PROJECTS</span>
         </div>
 
       </header>
@@ -85,106 +77,185 @@
       <section id="projects" class="projects-section">
 
         <div class="section-header">
-
           <div>
-            <span class="section-label">
-              01 / PORTFOLIO
-            </span>
-
-            <h2>
-              Selected Works<span class="heading-dot">.</span>
-            </h2>
-
+            <span class="section-label">01 / PORTFOLIO</span>
+            <h2>Selected Works<span class="heading-dot">.</span></h2>
             <p>한 학기 동안의 코딩 기록</p>
           </div>
 
           <span class="section-number">01 — 03</span>
-
         </div>
 
-        <!-- 과제 목록: 기존 링크와 제목 유지 -->
+        <p class="section-guide">
+          각 프로젝트를 선택하면 제작 정보를 확인할 수 있습니다.
+        </p>
+
         <ul class="assignment-list">
 
-          <!-- 과제 1 -->
+          <!-- ==================================
+               Assignment 1
+          ================================== -->
           <li class="assignment-card">
 
-            <a href="assignment1/" class="assignment-link">
+            <details class="project-details">
 
-              <span class="assignment-number">01</span>
+              <summary class="project-summary">
 
-              <span class="assignment-info">
+                <span class="assignment-number">01</span>
 
-                <span class="assignment-tag">
-                  SHAPES &amp; COLORS
+                <span class="assignment-info">
+                  <span class="assignment-tag">
+                    SHAPES &amp; COLORS
+                  </span>
+
+                  <span class="assignment-title">
+                    Assignment 1 - p5로 표현한 사범대학 10동
+                  </span>
                 </span>
 
-                <span class="assignment-title">
+                <span class="expand-icon" aria-hidden="true">
+                  +
+                </span>
+
+              </summary>
+
+              <div class="project-content">
+
+                <div class="project-description">
+                  <h3>About this project</h3>
+                  <p>
+                    p5.js의 기본 도형과 색상 표현을 활용하여
+                    서울대학교 사범대학 10동을 시각적으로
+                    재현한 프로젝트입니다.
+                  </p>
+                </div>
+
+                <div class="project-tags">
+                  <span>p5.js</span>
+                  <span>Shapes</span>
+                  <span>Colors</span>
+                </div>
+
+                <a href="assignment1/" class="project-button">
                   Assignment 1 - p5로 표현한 사범대학 10동
-                </span>
+                  <span aria-hidden="true">↗</span>
+                </a>
 
-              </span>
+              </div>
 
-              <span class="assignment-arrow" aria-hidden="true">
-                ↗
-              </span>
-
-            </a>
+            </details>
 
           </li>
 
 
-          <!-- 과제 2 -->
+          <!-- ==================================
+               Assignment 2
+          ================================== -->
           <li class="assignment-card">
 
-            <a href="assignment2/" class="assignment-link">
+            <details class="project-details">
 
-              <span class="assignment-number">02</span>
+              <summary class="project-summary">
 
-              <span class="assignment-info">
+                <span class="assignment-number">02</span>
 
-                <span class="assignment-tag">
-                  RANDOMNESS
+                <span class="assignment-info">
+                  <span class="assignment-tag">
+                    RANDOMNESS
+                  </span>
+
+                  <span class="assignment-title">
+                    Assignment 2 - 랜덤 함수를 사용한 브루클린 브릿지의 유성우
+                  </span>
                 </span>
 
-                <span class="assignment-title">
+                <span class="expand-icon" aria-hidden="true">
+                  +
+                </span>
+
+              </summary>
+
+              <div class="project-content">
+
+                <div class="project-description">
+                  <h3>About this project</h3>
+                  <p>
+                    랜덤 함수를 활용하여 브루클린 브릿지의
+                    밤하늘에 유성우가 나타나는 장면을
+                    표현한 프로젝트입니다.
+                  </p>
+                </div>
+
+                <div class="project-tags">
+                  <span>p5.js</span>
+                  <span>Random</span>
+                  <span>Visual Art</span>
+                </div>
+
+                <a href="assignment2/" class="project-button">
                   Assignment 2 - 랜덤 함수를 사용한 브루클린 브릿지의 유성우
-                </span>
+                  <span aria-hidden="true">↗</span>
+                </a>
 
-              </span>
+              </div>
 
-              <span class="assignment-arrow" aria-hidden="true">
-                ↗
-              </span>
-
-            </a>
+            </details>
 
           </li>
 
 
-          <!-- 과제 3 -->
+          <!-- ==================================
+               Assignment 3
+          ================================== -->
           <li class="assignment-card">
 
-            <a href="assignment3/" class="assignment-link">
+            <details class="project-details">
 
-              <span class="assignment-number">03</span>
+              <summary class="project-summary">
 
-              <span class="assignment-info">
+                <span class="assignment-number">03</span>
 
-                <span class="assignment-tag">
-                  INTERACTION
+                <span class="assignment-info">
+                  <span class="assignment-tag">
+                    INTERACTION
+                  </span>
+
+                  <span class="assignment-title">
+                    Assignment 3 - 버튼 기능을 활용한 체리 푸딩 게임
+                  </span>
                 </span>
 
-                <span class="assignment-title">
+                <span class="expand-icon" aria-hidden="true">
+                  +
+                </span>
+
+              </summary>
+
+              <div class="project-content">
+
+                <div class="project-description">
+                  <h3>About this project</h3>
+                  <p>
+                    마우스 클릭과 사용자 입력에 따라
+                    체리와 푸딩의 상태가 달라지는
+                    인터랙티브 게임 프로젝트입니다.
+                  </p>
+                </div>
+
+                <div class="project-tags">
+                  <span>p5.js</span>
+                  <span>Interaction</span>
+                  <span>Animation</span>
+                </div>
+
+                <a href="assignment3/" class="project-button">
                   Assignment 3 - 버튼 기능을 활용한 체리 푸딩 게임
-                </span>
+                  <span aria-hidden="true">↗</span>
+                </a>
 
-              </span>
+              </div>
 
-              <span class="assignment-arrow" aria-hidden="true">
-                ↗
-              </span>
-
-            </a>
+            </details>
 
           </li>
 
@@ -193,27 +264,18 @@
       </section>
 
 
-      <!-- 자기소개 영역 -->
+      <!-- 자기소개 -->
       <section id="about" class="about-section">
 
         <div class="section-header">
-
           <div>
-            <span class="section-label">
-              02 / PROFILE
-            </span>
-
-            <h2>
-              About Me<span class="heading-dot">.</span>
-            </h2>
+            <span class="section-label">02 / PROFILE</span>
+            <h2>About Me<span class="heading-dot">.</span></h2>
           </div>
-
         </div>
 
-        <!-- 프로필 및 연락처 카드 -->
         <div class="about-card glass-card">
 
-          <!-- 프로필 상단 -->
           <div class="profile-main">
 
             <div class="profile-icon" aria-hidden="true">
@@ -221,7 +283,6 @@
             </div>
 
             <div class="profile-info">
-
               <h3>
                 김수빈
                 <span>Kim Subin</span>
@@ -229,7 +290,6 @@
 
               <p>서울대학교 영어교육과</p>
               <p>언론정보학과 복수전공</p>
-
             </div>
 
             <span class="profile-label">
@@ -239,40 +299,30 @@
           </div>
 
 
-          <!-- Contact: 이메일만 표시 -->
+          <!-- 이메일 연락처 -->
           <div class="contact-section">
 
             <h4>CONTACT</h4>
 
-            <div class="contact-list">
+            <a href="mailto:sub2727@snu.ac.kr"
+               class="contact-item">
 
-              <!-- 클릭하면 메일 작성 창으로 이동 -->
-              <a href="mailto:sub2727@snu.ac.kr"
-                 class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                ✉
+              </span>
 
-                <span class="contact-icon" aria-hidden="true">
-                  ✉
+              <span class="contact-info">
+                <span class="contact-label">EMAIL</span>
+                <span class="contact-value">
+                  sub2727@snu.ac.kr
                 </span>
+              </span>
 
-                <span class="contact-info">
+              <span class="contact-arrow" aria-hidden="true">
+                ↗
+              </span>
 
-                  <span class="contact-label">
-                    EMAIL
-                  </span>
-
-                  <span class="contact-value">
-                    sub2727@snu.ac.kr
-                  </span>
-
-                </span>
-
-                <span class="contact-arrow" aria-hidden="true">
-                  ↗
-                </span>
-
-              </a>
-
-            </div>
+            </a>
 
           </div>
 
@@ -283,7 +333,7 @@
     </main>
 
 
-    <!-- 하단 푸터 -->
+    <!-- 페이지 하단 -->
     <footer class="footer">
 
       <span>© 2026 KIM SUBIN</span>
